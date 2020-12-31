@@ -1,0 +1,64 @@
+{{>header}}
+<title>Signup</title>
+<body>
+ <div id="forms" class="signup">
+  <div class="left">
+   <img src="/img/logo.png" alt="">
+   <h3>Discover your world of possibilities and limitlessness</h3>
+  </div>
+  <div class="right">
+    <h3>Already a member? <a href="/account/login">Sign in</a></h3>
+    
+    <div class="form-fields">
+      <h2>Sign Up to Task Manager</h2>
+      <div class="oauth">
+        <button class="btn-primary" type="submit"> <i class="fab fa-google"></i> Sign up with Google </button>
+        <button type="submit" class="btn-dark"> <i class="fab fa-twitter"></i> </button>
+      </div>
+      
+      <div class="or-alternative">Or</div>
+
+      <form method="post" action="/account/register">
+       <div class="form-group">
+        <label for="fname">First Name</label>
+        <label for="lname">Last Name</label>
+       </div>
+   
+       <div class="form-group">
+        <input type="text" id="fname" name="firstname" required>
+        <input type="text" id="lname" name="lastname" required>
+       </div>
+   
+       <!-- Email -->
+       <div class="form-group">
+        <label for="email">email</label>
+       </div>
+   
+       <div class="form-group">
+        <input type="email" id="email" name="email" required>
+       </div>
+   
+       <!-- Password -->
+       <div class="form-group">
+        <label for="password">password</label>
+       </div>
+   
+       <div class="form-group">
+        <input type="password" id="password" name="password" required>
+       </div>
+       <!-- Password ends -->
+       <div class="accept">
+        <input type="checkbox" class="accept-button" required>
+        <p>Creating an account means you're okay with our Terms of services, Privacy .....</p>
+       </div>
+
+      <!-- Create Account -->
+        <button type="submit" class="btn-secondary">Create Account</button>
+      </div>
+     </form>
+  </div>
+ </div>
+ {{>footer}}
+
+ <script src="/js/index.js"></script>
+</body>

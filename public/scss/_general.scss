@@ -1,0 +1,81 @@
+// general styles
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $light-color;
+  color: set-text-color($light-color);
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1 {
+  font-family: $header-font;
+  font-size: 3rem;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: $sub-header-font;
+}
+
+p {
+  font-family: $para-font;
+  font-size: 1.2rem;
+}
+
+a,
+span,
+button,
+input {
+  font-family: $button-font;
+}
+
+a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: $dark-color;
+}
+
+button,
+input {
+  font-size: 1rem;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(
+    135deg,
+    $primary-color 50%,
+    $secondary-color 100%
+  );
+  color: set-text-color($primary-color);
+  height: 3rem;
+  text-align: center;
+
+  p {
+    height: 100%;
+    font-weight: bold;
+    padding: 1rem;
+    text-transform: capitalize;
+  }
+}

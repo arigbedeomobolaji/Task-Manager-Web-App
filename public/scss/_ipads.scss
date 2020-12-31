@@ -1,0 +1,50 @@
+@media (max-width: 754px) {
+  #forms {
+    .left {
+      display: none;
+    }
+    .right {
+      width: 350px;
+
+      .form-group {
+        input {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+  #profile {
+    .navbar {
+      padding: 1rem;
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+
+      & > * {
+        width: 100%;
+        display: none;
+        &:first-child {
+          text-align: center;
+          img {
+            width: 100px;
+            height: 100px;
+          }
+        }
+
+        &:last-child {
+          align-items: flex-start;
+          justify-content: space-between;
+          .profile {
+            height: 3rem;
+          }
+          .btn-primary {
+            font-size: 0.85rem;
+            padding: 1rem;
+            width: 20%;
+          }
+        }
+      }
+    }
+  }
+}

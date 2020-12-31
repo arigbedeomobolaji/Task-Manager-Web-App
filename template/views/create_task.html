@@ -1,0 +1,17 @@
+{{>header}}
+<title>Create Task</title>
+<body>
+ <div id="create-task">
+  <form action="/tasks/create" method="post">
+   <textarea name="description" placeholder="Task Description"></textarea>
+   <div class="div-group">
+    <label for="true">True</label>
+    <input type="radio" name="completed" value="true" id="true">
+    <label for="false">False</label>
+    <input type="radio" name="completed" value="false" id="false">
+   </div>
+   <button type="submit" class="btn-primary">Create</button>
+  </form>
+ </div>
+ {{>footer}}
+</body>

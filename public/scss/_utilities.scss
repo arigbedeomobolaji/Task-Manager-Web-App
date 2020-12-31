@@ -1,0 +1,167 @@
+%btn-shared {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.65rem 1.2rem;
+}
+
+.btn {
+  &-primary {
+    @extend %btn-shared;
+
+    background: $primary-color;
+    color: set-text-color($primary-color);
+  }
+
+  &-light {
+    @extend %btn-shared;
+    background: rgb(253, 251, 251);
+    color: set-text-color(rgb(253, 251, 251));
+  }
+
+  &-secondary {
+    @extend %btn-shared;
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+
+  &-dark {
+    @extend %btn-shared;
+    background: $dark-color;
+    color: set-text-color($dark-color);
+  }
+}
+
+/* forms field */
+.form-fields {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h2 {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  .oauth {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+
+    button {
+      margin: 0;
+
+      &:first-child {
+        flex: 7.5;
+        width: 90%;
+        padding: 0.75rem 1rem;
+        margin-right: 0.3rem;
+      }
+
+      &:not(:first-child) {
+        flex: 1.5;
+        width: 100%;
+        padding: 0;
+        background: #ccc;
+        color: #333;
+      }
+    }
+  }
+
+  .or-alternative {
+    font-family: $button-font;
+    padding: 0.5rem 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 46%;
+      position: absolute;
+      height: 0.09px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #ddd;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  .form-group {
+    display: flex;
+
+    & > * {
+      flex: 1;
+    }
+    label {
+      font-family: $sub-header-font;
+      font-weight: 700;
+      padding: 0.5rem 0.5rem;
+      text-transform: capitalize;
+
+      a {
+        float: right;
+        color: $primary-color;
+        font-size: 0.89rem;
+      }
+    }
+
+    input {
+      font-family: $button-font;
+      font-weight: 1000;
+      display: inline-block;
+      margin-right: 4px;
+      outline: $secondary-color;
+      border: $secondary-color;
+      box-sizing: border-box;
+      border-radius: 5px;
+      padding: 0.56rem 0;
+      padding-left: 5px;
+      background: rgba(174, 169, 169, 0.2);
+
+      &:focus {
+        box-shadow: 2px 2px 3px $secondary-light-color,
+          -2px -2px 3px $secondary-light-color;
+        background: $light-color;
+        color: set-text-color($light-color);
+      }
+    }
+  }
+
+  .accept {
+    height: 4rem;
+    position: relative;
+
+    & > * {
+      position: absolute;
+      height: auto;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    input {
+      left: 1rem;
+    }
+
+    p {
+      left: 2.4rem;
+      font-size: 0.95rem;
+      font-weight: 1000;
+    }
+  }
+}

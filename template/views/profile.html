@@ -1,0 +1,51 @@
+{{>header}}
+<title>Welcome | {{username}}</title>
+<body>
+ <!-- Profile  -->
+ <div id="profile">
+  <!-- Navbar -->
+  <div class="navbar">
+   <!-- logo navbar left -->
+   <div><img src="/img/logo.png" alt=""></div>
+  <!-- Navbar right links -->
+  <div>
+   <!-- Link One search button -->
+   <form action="/tasks/search" method="post" class="search">
+    <input type="search" name="search" placeholder="search task">
+    <button type="submit"><i class="fas fa-search"></i> </button>
+   </form>
+   <!-- Profile dropdown -->
+   <div class="profile">
+    <img src="" alt="">
+    <i class="fas fa-user"></i>
+   </form>
+  
+    <!-- Dropdown -->
+    <div class="inner">
+     <a href="/{{username}}">Profile</a>
+     <a href="/profile/edit-profile">Edit Profile</a>
+     <a href="/account/setting">Account Setting</a>
+     <a href="/account/logout">Sign out</a>
+    </div>
+   </div>
+   <!-- Create Task -->
+   <a href="/tasks/create" class="btn-primary">Create Task</a>
+   <a href="/tasks/query" class="btn-secondary">Search related Task</a>
+
+  </div>
+ 
+ 
+  </div>
+  <hr>
+  <div class="your-tasks">
+   <h1>Your Tasks and their status</h1>
+    <div class="tasks">
+     {{#each tasks}}
+     <div class="task">
+      <h3>{{this.description}}</h3>
+      <p>{{this.completed}}</p>
+     </div>
+     {{/each}}
+    </div>
+  </div>
+ </div>

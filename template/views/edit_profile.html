@@ -1,0 +1,14 @@
+{{>header}}
+<title>Welcome | {{username}}</title>
+<body>
+
+ <div class="upload-photo">
+  <h1>Upload your profile pics</h1>
+  <form action="/profile/uploads" method="post" enctype="multipart/form-data">
+   <label for="avatar"> Upload profile pics </label>
+   <input type="file" name="avatar" id="avatar">
+   <button type="submit" class="btn-dark">Upload Profile Pics</button>
+ </form>
+ </div>
+ {{>footer}}
+</body>
